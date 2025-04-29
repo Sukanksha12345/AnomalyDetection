@@ -1,0 +1,525 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Business 314 Details</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body class="bg-light">
+    <div class="container mt-5">
+        <h1>Business 314 - Anomalous Transactions </h1>
+        <a class="btn btn-secondary mb-4" href="Anomaly_Detection_Summary_Report.html">⬅ Back to Summary</a>
+
+        <h3>SHAP Violin Plot</h3>
+        <div class="text-center mb-4">
+            <img src="../plots/violin_plot_business_314.png" class="img-fluid" style="max-height:500px;" alt="Violin Plot">
+        </div>
+
+        <h3>Transactions (Top anomalies highlighted )</h3>
+        <table class="table table-striped table-hover">
+        <thead class="table-dark">
+        <tr>
+            <th>Transaction ID</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Counter Party ID</th>
+            <th>Counter Party Country</th>
+            <th>Tx Type</th>
+            <th>Explanation</th>
+            <th>Anomaly Score</th>
+        </tr>
+        </thead>
+        <tbody>
+    
+        <tr style='font-weight:bold; color:#d9534f;'>
+            <td>9251466</td>
+            <td>2019-11-07 11:34:28</td>
+            <td>$4,578.74</td>
+            <td>58861</td>
+            <td>SA</td>
+            <td>credit</td>
+            <td>rare counter party country, unusual amount ($4,579), unusual time of day (11:00)</td>
+            <td>-0.0677</td>
+        </tr>
+        
+        <tr style='font-weight:bold; color:#d9534f;'>
+            <td>14395945</td>
+            <td>2020-01-29 14:48:24</td>
+            <td>$538.90</td>
+            <td>39122</td>
+            <td>NL</td>
+            <td>debit</td>
+            <td>rare counter party country, unusual activity in month 1, unusual transaction type (credit/debit)</td>
+            <td>-0.0540</td>
+        </tr>
+        
+        <tr style='font-weight:bold; color:#d9534f;'>
+            <td>523756</td>
+            <td>2019-07-07 21:31:39</td>
+            <td>$547.60</td>
+            <td>69232</td>
+            <td>TR</td>
+            <td>credit</td>
+            <td>rare counter party country, transaction on Sunday, unusual time of day (21:00)</td>
+            <td>-0.0487</td>
+        </tr>
+        
+        <tr style='font-weight:bold; color:#d9534f;'>
+            <td>697006</td>
+            <td>2019-07-10 14:01:06</td>
+            <td>$655.74</td>
+            <td>23872</td>
+            <td>US</td>
+            <td>debit</td>
+            <td>rare counter party country, unusual transaction type (credit/debit), transaction on Wednesday</td>
+            <td>-0.0410</td>
+        </tr>
+        
+        <tr style='font-weight:bold; color:#d9534f;'>
+            <td>2065672</td>
+            <td>2019-07-28 21:00:23</td>
+            <td>$12,458.14</td>
+            <td>35390</td>
+            <td>GB</td>
+            <td>credit</td>
+            <td>very high amount ($12,458), transaction on Sunday, unusual time of day (21:00)</td>
+            <td>-0.0389</td>
+        </tr>
+        
+        <tr >
+            <td>5608814</td>
+            <td>2019-09-15 15:22:12</td>
+            <td>$1,742.16</td>
+            <td>1626</td>
+            <td>US</td>
+            <td>credit</td>
+            <td>rare counter party country, transaction on Sunday, unusual amount ($1,742)</td>
+            <td>-0.0385</td>
+        </tr>
+        
+        <tr >
+            <td>2389110</td>
+            <td>2019-08-02 05:32:39</td>
+            <td>$8,394.60</td>
+            <td>75949</td>
+            <td>FR</td>
+            <td>credit</td>
+            <td>unusual amount ($8,395), transaction at unusual hour (5:00), rare counter party country</td>
+            <td>-0.0316</td>
+        </tr>
+        
+        <tr >
+            <td>13606459</td>
+            <td>2020-01-15 08:10:11</td>
+            <td>$1,571.67</td>
+            <td>17464</td>
+            <td>IE</td>
+            <td>debit</td>
+            <td>unusual activity in month 1, unusual transaction type (credit/debit), rare counter party country</td>
+            <td>-0.0296</td>
+        </tr>
+        
+        <tr >
+            <td>5751734</td>
+            <td>2019-09-18 04:52:43</td>
+            <td>$550.90</td>
+            <td>71548</td>
+            <td>Unknown</td>
+            <td>credit</td>
+            <td>rare counter party country, transaction at unusual hour (4:00), transaction on Wednesday</td>
+            <td>-0.0255</td>
+        </tr>
+        
+        <tr >
+            <td>192779</td>
+            <td>2019-07-03 10:27:18</td>
+            <td>$6,304.50</td>
+            <td>17565</td>
+            <td>IE</td>
+            <td>debit</td>
+            <td>unusual amount ($6,304), unusual transaction type (credit/debit), rare counter party country</td>
+            <td>-0.0252</td>
+        </tr>
+        
+        <tr >
+            <td>7660246</td>
+            <td>2019-10-16 06:41:52</td>
+            <td>$51.05</td>
+            <td>46559</td>
+            <td>Unknown</td>
+            <td>credit</td>
+            <td>rare counter party country, transaction at unusual hour (6:00), transaction on Wednesday</td>
+            <td>-0.0243</td>
+        </tr>
+        
+        <tr >
+            <td>11027878</td>
+            <td>2019-12-06 14:06:19</td>
+            <td>$3,064.30</td>
+            <td>73035</td>
+            <td>CH</td>
+            <td>debit</td>
+            <td>unusual amount ($3,064), unusual transaction type (credit/debit), unusual activity in month 12</td>
+            <td>-0.0222</td>
+        </tr>
+        
+        <tr >
+            <td>797525</td>
+            <td>2019-07-11 21:34:26</td>
+            <td>$5,245.20</td>
+            <td>10891</td>
+            <td>AT</td>
+            <td>credit</td>
+            <td>unusual amount ($5,245), rare counter party country, unusual time of day (21:00)</td>
+            <td>-0.0212</td>
+        </tr>
+        
+        <tr >
+            <td>4771915</td>
+            <td>2019-09-02 22:51:52</td>
+            <td>$341.60</td>
+            <td>50795</td>
+            <td>PT</td>
+            <td>credit</td>
+            <td>rare counter party country, transaction at unusual hour (22:00), transaction on Monday</td>
+            <td>-0.0210</td>
+        </tr>
+        
+        <tr >
+            <td>9770516</td>
+            <td>2019-11-16 17:51:22</td>
+            <td>$10,099.53</td>
+            <td>37531</td>
+            <td>DE</td>
+            <td>credit</td>
+            <td>very high amount ($10,100), transaction on Saturday, unusual activity in month 11</td>
+            <td>-0.0208</td>
+        </tr>
+        
+        <tr >
+            <td>13924143</td>
+            <td>2020-01-21 10:44:49</td>
+            <td>$1,273.18</td>
+            <td>64938</td>
+            <td>DE</td>
+            <td>debit</td>
+            <td>unusual activity in month 1, unusual transaction type (credit/debit), unusual amount ($1,273)</td>
+            <td>-0.0205</td>
+        </tr>
+        
+        <tr >
+            <td>9417190</td>
+            <td>2019-11-10 20:06:34</td>
+            <td>$218.89</td>
+            <td>71505</td>
+            <td>NL</td>
+            <td>credit</td>
+            <td>rare counter party country, transaction on Sunday, unusual time of day (20:00)</td>
+            <td>-0.0187</td>
+        </tr>
+        
+        <tr >
+            <td>4970159</td>
+            <td>2019-09-06 09:04:23</td>
+            <td>$1,936.50</td>
+            <td>11115</td>
+            <td>PT</td>
+            <td>credit</td>
+            <td>rare counter party country, unusual amount ($1,936), unusual transaction type (credit/debit)</td>
+            <td>-0.0184</td>
+        </tr>
+        
+        <tr >
+            <td>7503950</td>
+            <td>2019-10-13 12:23:43</td>
+            <td>$181.43</td>
+            <td>24489</td>
+            <td>PT</td>
+            <td>credit</td>
+            <td>rare counter party country, transaction on Sunday, unusual time of day (12:00)</td>
+            <td>-0.0156</td>
+        </tr>
+        
+        <tr >
+            <td>9771094</td>
+            <td>2019-11-16 18:00:25</td>
+            <td>$10,099.53</td>
+            <td>37531</td>
+            <td>DE</td>
+            <td>credit</td>
+            <td>very high amount ($10,100), transaction on Saturday, unusual transaction type (credit/debit)</td>
+            <td>-0.0148</td>
+        </tr>
+        
+        <tr >
+            <td>765382</td>
+            <td>2019-07-11 13:33:05</td>
+            <td>$35.78</td>
+            <td>30454</td>
+            <td>PT</td>
+            <td>debit</td>
+            <td>rare counter party country, unusual transaction type (credit/debit), unusual time of day (13:00)</td>
+            <td>-0.0147</td>
+        </tr>
+        
+        <tr >
+            <td>5922961</td>
+            <td>2019-09-20 13:36:53</td>
+            <td>$2,076.90</td>
+            <td>7244</td>
+            <td>PT</td>
+            <td>credit</td>
+            <td>rare counter party country, unusual amount ($2,077), unusual time of day (13:00)</td>
+            <td>-0.0137</td>
+        </tr>
+        
+        <tr >
+            <td>4182504</td>
+            <td>2019-08-25 00:19:19</td>
+            <td>$826.70</td>
+            <td>10265</td>
+            <td>AT</td>
+            <td>credit</td>
+            <td>unusual time of day (0:00), rare counter party country, transaction on Sunday</td>
+            <td>-0.0134</td>
+        </tr>
+        
+        <tr >
+            <td>11925940</td>
+            <td>2019-12-19 13:04:08</td>
+            <td>$3,170.90</td>
+            <td>62921</td>
+            <td>CH</td>
+            <td>debit</td>
+            <td>unusual amount ($3,171), unusual transaction type (credit/debit), unusual activity in month 12</td>
+            <td>-0.0130</td>
+        </tr>
+        
+        <tr >
+            <td>14263023</td>
+            <td>2020-01-27 09:16:03</td>
+            <td>$103.15</td>
+            <td>25656</td>
+            <td>BE</td>
+            <td>debit</td>
+            <td>unusual activity in month 1, rare counter party country, unusual transaction type (credit/debit)</td>
+            <td>-0.0104</td>
+        </tr>
+        
+        <tr >
+            <td>4964240</td>
+            <td>2019-09-06 07:28:04</td>
+            <td>$4,952.16</td>
+            <td>25054</td>
+            <td>AT</td>
+            <td>credit</td>
+            <td>unusual amount ($4,952), rare counter party country, unusual time of day (7:00)</td>
+            <td>-0.0086</td>
+        </tr>
+        
+        <tr >
+            <td>270034</td>
+            <td>2019-07-04 11:59:06</td>
+            <td>$7,065.48</td>
+            <td>15934</td>
+            <td>AT</td>
+            <td>credit</td>
+            <td>unusual amount ($7,065), rare counter party country, unusual transaction type (credit/debit)</td>
+            <td>-0.0076</td>
+        </tr>
+        
+        <tr >
+            <td>324681</td>
+            <td>2019-07-05 09:21:13</td>
+            <td>$77.87</td>
+            <td>38904</td>
+            <td>NL</td>
+            <td>debit</td>
+            <td>rare counter party country, unusual transaction type (credit/debit), transaction on Friday</td>
+            <td>-0.0074</td>
+        </tr>
+        
+        <tr >
+            <td>9243261</td>
+            <td>2019-11-07 13:16:37</td>
+            <td>$404.64</td>
+            <td>39008</td>
+            <td>NL</td>
+            <td>debit</td>
+            <td>rare counter party country, unusual transaction type (credit/debit), unusual activity in month 11</td>
+            <td>-0.0073</td>
+        </tr>
+        
+        <tr >
+            <td>13606511</td>
+            <td>2020-01-15 08:11:47</td>
+            <td>$788.61</td>
+            <td>17464</td>
+            <td>IE</td>
+            <td>debit</td>
+            <td>unusual activity in month 1, unusual transaction type (credit/debit), rare counter party country</td>
+            <td>-0.0071</td>
+        </tr>
+        
+        <tr >
+            <td>1883411</td>
+            <td>2019-07-26 13:57:49</td>
+            <td>$3,072.90</td>
+            <td>63219</td>
+            <td>CH</td>
+            <td>debit</td>
+            <td>unusual amount ($3,073), unusual transaction type (credit/debit), rare counter party country</td>
+            <td>-0.0070</td>
+        </tr>
+        
+        <tr >
+            <td>3539538</td>
+            <td>2019-08-16 13:55:54</td>
+            <td>$102.27</td>
+            <td>39130</td>
+            <td>NL</td>
+            <td>debit</td>
+            <td>rare counter party country, unusual transaction type (credit/debit), unusual time of day (13:00)</td>
+            <td>-0.0070</td>
+        </tr>
+        
+        <tr >
+            <td>6794731</td>
+            <td>2019-10-04 00:25:32</td>
+            <td>$2,047.24</td>
+            <td>17376</td>
+            <td>IE</td>
+            <td>credit</td>
+            <td>unusual time of day (0:00), rare counter party country, unusual amount ($2,047)</td>
+            <td>-0.0069</td>
+        </tr>
+        
+        <tr >
+            <td>13893124</td>
+            <td>2020-01-20 11:52:55</td>
+            <td>$50.70</td>
+            <td>10246</td>
+            <td>AT</td>
+            <td>debit</td>
+            <td>unusual activity in month 1, rare counter party country, unusual transaction type (credit/debit)</td>
+            <td>-0.0059</td>
+        </tr>
+        
+        <tr >
+            <td>1236163</td>
+            <td>2019-07-18 07:40:06</td>
+            <td>$12,063.20</td>
+            <td>77347</td>
+            <td>FR</td>
+            <td>credit</td>
+            <td>very high amount ($12,063), rare counter party country, transaction on Thursday</td>
+            <td>-0.0049</td>
+        </tr>
+        
+        <tr >
+            <td>8802144</td>
+            <td>2019-11-01 00:29:11</td>
+            <td>$1,260.60</td>
+            <td>10407</td>
+            <td>AT</td>
+            <td>credit</td>
+            <td>unusual time of day (0:00), rare counter party country, unusual amount ($1,261)</td>
+            <td>-0.0049</td>
+        </tr>
+        
+        <tr >
+            <td>9711932</td>
+            <td>2019-11-15 22:32:48</td>
+            <td>$630.40</td>
+            <td>71728</td>
+            <td>LU</td>
+            <td>credit</td>
+            <td>rare counter party country, transaction at unusual hour (22:00), unusual activity in month 11</td>
+            <td>-0.0045</td>
+        </tr>
+        
+        <tr >
+            <td>2048405</td>
+            <td>2019-07-28 16:13:56</td>
+            <td>$524.28</td>
+            <td>39008</td>
+            <td>NL</td>
+            <td>credit</td>
+            <td>rare counter party country, transaction on Sunday, unusual transaction type (credit/debit)</td>
+            <td>-0.0044</td>
+        </tr>
+        
+        <tr >
+            <td>7100182</td>
+            <td>2019-10-07 20:49:19</td>
+            <td>$5,349.10</td>
+            <td>62152</td>
+            <td>CH</td>
+            <td>credit</td>
+            <td>unusual amount ($5,349), unusual time of day (20:00), rare counter party country</td>
+            <td>-0.0033</td>
+        </tr>
+        
+        <tr >
+            <td>7100091</td>
+            <td>2019-10-07 20:44:37</td>
+            <td>$5,349.10</td>
+            <td>62152</td>
+            <td>CH</td>
+            <td>credit</td>
+            <td>unusual amount ($5,349), unusual time of day (20:00), rare counter party country</td>
+            <td>-0.0033</td>
+        </tr>
+        
+        <tr >
+            <td>1258038</td>
+            <td>2019-07-18 11:41:29</td>
+            <td>$481.47</td>
+            <td>46559</td>
+            <td>Unknown</td>
+            <td>credit</td>
+            <td>rare counter party country, unusual transaction type (credit/debit), transaction on Thursday</td>
+            <td>-0.0025</td>
+        </tr>
+        
+        <tr >
+            <td>3979201</td>
+            <td>2019-08-22 14:04:10</td>
+            <td>$109.74</td>
+            <td>39008</td>
+            <td>NL</td>
+            <td>debit</td>
+            <td>rare counter party country, unusual transaction type (credit/debit), unusual time of day (14:00)</td>
+            <td>-0.0022</td>
+        </tr>
+        
+        <tr >
+            <td>10576459</td>
+            <td>2019-11-29 13:52:51</td>
+            <td>$2,255.00</td>
+            <td>4591</td>
+            <td>AT</td>
+            <td>debit</td>
+            <td>unusual transaction type (credit/debit), unusual amount ($2,255), rare counter party country</td>
+            <td>-0.0021</td>
+        </tr>
+        
+        <tr >
+            <td>1856902</td>
+            <td>2019-07-26 10:07:49</td>
+            <td>$1,986.90</td>
+            <td>37014</td>
+            <td>AT</td>
+            <td>debit</td>
+            <td>unusual transaction type (credit/debit), rare counter party country, unusual amount ($1,987)</td>
+            <td>-0.0000</td>
+        </tr>
+        
+        </tbody>
+        </table>
+    </div>
+    </body>
+    </html>
+    
